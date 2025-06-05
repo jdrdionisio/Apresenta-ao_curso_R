@@ -1,0 +1,282 @@
+---
+title: "Fundamentals of Data Science in Healthcare"
+author: "André Peralta-Santos, Coordenador do Curso"
+format: 
+  revealjs:
+    theme: [default, styles.scss]
+    subtitle: "Applications in R"
+    data: "6 de Junho de 2025"
+    institute: "Escola Nacional de Saúde Pública"
+    title-slide-attributes: 
+      data-background-image: "Titulo.jpg"
+    slide-number: true
+    show-slide-number: "all"
+    center-title-slide: false
+    embed-resources: true
+    footer: "Masterclass - Data Science to AI"
+    logo: logo.jpg
+editor: visual
+---
+
+## Curso {background-image="slides.jpg"}
+
+::: {.r-fit-text}
+
+Desenvolver competências práticas de análise de dados no setor da saúde.
+
+Formar profissionais capacitados na aplicação de tecnologias avançadas, como R, modelação preditiva e dashboards interativos.
+
+::: {.incremental .smaller}
+-   Análise eficiente de dados de saúde;
+-   Automatização de relatórios;
+-   Criação de visualizações interativas;
+-   **Integração da IA**para insights avançados.
+:::
+:::
+
+## Objetivos {background-image="slides.jpg"}
+
+::: {.r-fit-text}
+::: {.incremental .smaller}
+
+-   Compreender e aplicar as melhores práticas em R, RStudio e projetos de ciência de dados;
+-   Criar e personalizar relatórios profissionais em vários formatos utilizando Quarto;
+-   Manipular e explorar dados usando as ferramentas do tidyverse;
+-   Construir visualizações de dados e mapas com o ggplot2;
+-   Aplicar métodos estatísticos e desenvolver modelos inferenciais e preditivos em R;
+-   Desenvolver, ajustar e avaliar modelos de Machine Learning utilizando o tidymodels;
+-   Automatizar relatórios, criar dashboards e utilizar ferramentas de controle de versão para colaboração em projetos;
+-   Realizar um projeto abrangente (Capstone Project) do início ao fim e apresentar os resultados, demonstrando suas competências em Ciência de Dados.
+
+:::
+:::
+
+## Equipa Docente {background-image="slides.jpg"}
+
+:::columns
+
+::: {.column .smaller width="40%"}
+![André Peralta Santos](peralta.jpg){fig-align="center" width="90%"} **André Peralta Santos**
+:::
+
+::: {.column .smaller width="20%"}
+![Pedro Casaca](casaca.jpg){fig-align="center"} **Pedro Casaca**
+:::
+
+::: {.column .smaller width="20%"}
+![Manuel Ribeiro](ribeiro.jpg){fig-align="center"} **Manuel Ribeiro**
+:::
+
+::: {.column .smaller width="20%"}
+![João Dionísio](dionisio.jpg){fig-align="center"} **João Dionísio**
+:::
+
+:::
+
+## Módulos {background-image="slides.jpg" .smaller}
+
+
+-   Foundations of Data Science in R
+-   Data Science Collaboration tools (**Github**)
+-   Data Science productivity tools
+-   Data wrangling and exploration
+-   Data Visualization
+-   Inference and Statistical Models
+-   Machine Learning with R
+-   Advanced Data Science Tools
+-   Masterclass
+-   Projeto Final (Capstone)
+
+## Método de Ensino {background-image="slides.jpg" .smaller}
+
+O curso funciona com um sistema híbrido de ensino.
+
+-   Quatro sessões presenciais no ínicio e no final para facilitar a entrada na programação e haver feedback em direto;
+-   Seis sessões online assíncrona com vídeos, disponibilizados pela Equipa Docente;
+-   Módulos com trabalhos autónomo para estimular auto-aprendizagem;
+-   Sessões de dúvidas todas as semanas para esclarecer e consolidar conhecimento.
+
+## Manipulação de Dados {background-image="slides.jpg" .smaller}
+
+![](Manipulation_V4.mp4){width=80%}
+
+## Visualização de dados {background-image="slides.jpg" .smaller}
+
+![](Visualization_R_3.mp4){width=80%}
+
+## Exemplo {background-image="slides.jpg"}
+
+::: {.r-fit-text}
+::: {.incremental .smaller}
+
+```{r}
+#| echo: true
+#| output-location: slide
+library(ggplot2)
+library(dplyr)
+ggplot(airquality |> mutate(Temp= (Temp - 32) * 5/9), aes(Temp, Ozone)) +
+  geom_point(color = "steelblue", size = 2, alpha = 0.7) + 
+  geom_smooth(method = "loess")+
+  labs(
+    title = "Relação entre Temperatura e Ozono", 
+    subtitle = "Dados do ar em Nova York",
+    x = "Temperatura (°C)",
+    y = "Níveis de Ozono (ppb)"
+  )+
+  theme_minimal()+
+  theme(plot.title = element_text(face = "bold"))
+
+```
+
+:::
+:::
+
+## Machine Learning {background-image="slides.jpg" .smaller}
+
+![](ML_1.mp4){width=80%}
+
+
+## Edição Anterior {background-image="slides.jpg"}
+
+![](sala.jpeg){fig-align="center"}
+
+## Edição Anterior {background-image="slides.jpg"}
+
+![](pres1.jpeg){fig-align="center"}
+
+## Edição Anterior {background-image="slides.jpg" .r-stretch}
+
+![](pres2.jpeg){fig-align="center"}
+
+## Edição Anterior {background-image="slides.jpg" .r-stretch}
+
+![](pres3.jpeg){fig-align="center"}
+
+## Edição Anterior {background-image="slides.jpg" .r-stretch}
+
+![](grupo.jpeg){fig-align="center"}
+
+## Trabalhos anteriores {background-image="slides.jpg"}
+
+:::columns
+
+::: {.column .smaller width="50%"}
+![Quarto_1](quarto_1.jpg){fig-align="center"} **Mapas**
+:::
+
+::: {.column .smaller width="50%"}
+![Pedro Casaca](quarto_2.jpg){fig-align="center"} **Relatórios**
+:::
+
+:::
+## Trabalhos anteriores {background-image="slides.jpg"}
+
+:::columns
+
+::: {.column .smaller width="50%"}
+![Dashboards](dashboard_2.jpg){fig-align="center"} **Dashboards**
+:::
+
+::: {.column .smaller width="50%"}
+![Dashboards1](dashboard_1.jpg){fig-align="center"} **Dashboards**
+:::
+
+:::
+
+## Ciclo de Masterclasses {background-image="slides.jpg" }
+
+:::{.r-fit-text}
+
+Este ano teremos 3 sessões de Masterclass para que os alunos possam ver a aplicação de R em vários setores.
+
+- 6 de Junho (Data Science to AI)
+  - Chris Beeley (Head of data science Strategy Unit | NHS England)
+  - Doug Kelkhoff (Data scientist and software engineer | Roche)
+  - João Poças das Neves (Administrative Data team leader | Statistics Portugal - INE)
+  
+:::
+
+## Ciclo de Masterclasses {background-image="slides.jpg" }
+
+:::{.r-fit-text}
+
+Este ano teremos 3 sessões de Masterclass para que os alunos possam ver a aplicação de R em vários setores.
+- 12 de Setembro (Data Science in the Healthcare Industry)
+  - Eduardo Freire Rodrigues (CEO UpHill)
+  - Nuno André Silva Deputy Director (Hospital da Luz Learning Health)
+  - Patricia Pita Ferreira University Medical Center Groningen)
+  
+:::
+
+## Ciclo de Masterclasses {background-image="slides.jpg" }
+
+:::{.r-fit-text}
+
+Este ano teremos 3 sessões de Masterclass para que os alunos possam ver a aplicação de R em vários setores.
+- 18 de Outubro (Masterclass Data Visualization from Pie Charts to Satellites)
+  - Luis João  Head of Public Sector and Healthcare (Google Cloud)
+  - João Veiga Senior Manager de AI (Fedzai) 
+  - Mais um elemento
+  
+:::
+
+## Oradores {background-image="slides.jpg" .smaller}
+
+::: {.columns}
+::: {.column width="70%" .r-fit-text}
+Chris Beeley é um especialista em métodos de ciência de dados baseados em código, com foco na implementação e manutenção de produtos de ciência de dados em ambientes de saúde e assistência social.
+
+- **Áreas de Atuação e Interesse:**  
+  - Uso do **R** para análise e apresentação de dados.  
+    - **Processamento de Linguagem Natural (NLP).**  
+    - Estatísticas, previsões e desenvolvimento de relatórios e dashboards.  
+
+- **Posições e Contribuições:**  
+  - Membro fundador da comunidade **NHS-R**.  
+  - Chefe da equipa de ciência de dados na **Strategy Unit* 
+  
+:::
+::: {.column width="30%"}
+![](chris.jpg)
+:::
+:::
+
+
+## Oradores - João Poças {background-image="slides.jpg"}
+
+::: {.columns}
+::: {.column width="70%" .r-fit-text}
+- Mestrado em Análise de Dados e Sistemas de Apoio à Decisão pela Faculdade de Economia da Universidade do Porto.  
+- **Carreira Profissional:**  
+  - Ingressou no INE em 1997.  
+  - Integrou o Departamento de Sistemas de Informação, sendp responsável pelo Serviço de Infraestrutura Informacional até 2016.  
+  - Coordenador do Núcleo de Dados Administrativos no Serviço de Dados Administrativos e Empresariais, do Departamento de Recolha e Gestão de Dados do INE.  
+- **Áreas de Atuação:**  
+  - Especialista no tratamento e análise de dados administrativos.  
+  - Foco na melhoria da qualidade da produção estatística. 
+  
+:::
+::: {.column width="30%"}
+![](pocas.jpg)
+:::
+:::
+
+## Oradores - Doug Kelkhoff {background-image="slides.jpg"}
+
+::: {.columns}
+::: {.column width="70%" .r-fit-text}
+- **Doutorado em Bioengenharia** pela **UC Berkeley – UCSF** com foco em RNA-Seq e análise de dados.  
+- **Principal Data Scientist na Roche (desde 2017):**  
+  - Liderou o projeto **Autovalidate R**, automatizando validações de software.  
+  - Trabalhou em modelagem preditiva para a sobrevivência em ensaios clínicos oncológicos.  
+  - Desenvolveu e contribuiu para múltiplos pacotes R e extensões, como o tidymodels.  
+  - Liderou comunidades internas de R e Python, promovendo a prática de ciência de dados.  
+
+- **Contribuição Científica:**  
+  - Atua no desenvolvimento de ferramentas inovadoras e metodologias que promovem ciência transparente e eficaz. 
+  
+:::
+::: {.column width="30%"}
+![](doug.jpg)
+:::
+:::
